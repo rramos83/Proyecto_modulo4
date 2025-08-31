@@ -1,0 +1,1 @@
+export type CounterAction = { type: 'inc' } | { type: 'dec' } | { type: 'reset' };

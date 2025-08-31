@@ -1,0 +1,25 @@
+
+<ActionBar title="{{ title }}"></ActionBar>
+<ScrollView>
+  <StackLayout class="p-16">
+    <Label class="h2" text="1) Firebase token"></Label>
+    <Label text="Token FCM:" class="p-8 font-bold"></Label>
+    <Label [text]="fcmToken || 'Sin token aún…'" textWrap="true" class="p-8"></Label>
+
+    <Label class="h2 mt-16" text="2) Notificaciones -> Toast"></Label>
+    <Label text="Envía una notificación desde Firebase Console y verás un Toast." textWrap="true"></Label>
+
+    <Label class="h2 mt-16" text="3) Social Share (texto)"></Label>
+    <Button text="Compartir texto" (tap)="shareText()"></Button>
+
+    <Label class="h2 mt-16" text="4–6) Cámara + compartir imagen"></Label>
+    <Button text="Tomar foto" class="mb-8" (tap)="takePhotoAndShare()"></Button>
+    <Image *ngIf="captured" [src]="captured" height="180"></Image>
+    <Button *ngIf="captured" text="Compartir imagen" (tap)="shareCapturedImage()"></Button>
+
+    <Label class="h2 mt-16" text="7–8) Google Maps + Marker"></Label>
+    <StackLayout height="240">
+      <MapView latitude="14.072275" longitude="-87.192136" zoom="12" (mapReady)="onMapReady($event)"></MapView>
+    </StackLayout>
+  </StackLayout>
+</ScrollView>

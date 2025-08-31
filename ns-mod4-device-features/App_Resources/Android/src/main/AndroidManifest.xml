@@ -1,0 +1,6 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.nativescript.mod4">
+    <application android:name="com.tns.NativeScriptApplication" android:allowBackup="true" android:label="Modulo4" android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="YOUR_ANDROID_MAPS_API_KEY"/>
+    </application>
+</manifest>
